@@ -17,6 +17,7 @@ public class Publisher {
     @Column(name = "publisher_name")
     private String publisherName;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "address_id")
     private Address primaryAddress;
 
     public Publisher(String publisherName) {

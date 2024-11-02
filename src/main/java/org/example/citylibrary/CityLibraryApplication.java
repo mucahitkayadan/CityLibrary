@@ -30,7 +30,7 @@ public class CityLibraryApplication {
 			Publisher savedPublisher = publisherRepository.save(publisher);
 			System.out.println(savedPublisher + " is saved");
 
-			Optional<List<Publisher>> foundPublisher = publisherRepository.findByPublisherName("Muja Kayadan");
+			Optional<Publisher> foundPublisher = publisherRepository.findByPublisherName("Muja Kayadan");
             foundPublisher.ifPresent(value -> System.out.println(value + " is found"));
 
 			// Update publisher name
