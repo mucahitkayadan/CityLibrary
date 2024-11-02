@@ -1,6 +1,8 @@
 package org.example.citylibrary.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.NoArgsConstructor;
@@ -10,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "authors")
 public class Author {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer authorId;
     private String authorName;
     private String authorLastname;
