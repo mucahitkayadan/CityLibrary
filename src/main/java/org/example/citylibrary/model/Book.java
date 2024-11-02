@@ -1,8 +1,15 @@
 package org.example.citylibrary.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Entity(name = "books")
+@Entity
+@Table(name = "books")
+@NoArgsConstructor
+@Getter
+@Setter
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
